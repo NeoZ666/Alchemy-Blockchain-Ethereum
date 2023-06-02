@@ -19,6 +19,8 @@ class Transaction {
         if(inputTotal < total) {
             throw new error("Insuffficient balance")
         }
+        this.input.forEach(((x) => {x.spend()}));
+        this.fee = (inputTotal-total > 0) ? inputTotal-total : 0;
     }
 }
 
