@@ -1,3 +1,6 @@
 [submodule "Week 1/ecdsa-node"]
 	path = Week 1/ecdsa-node
 	url = https://github.com/NeoZ666/ecdsa-node.git
+[submodule "Week 2/UTXOs/script"]
+	path = Week 2/UTXOs/script
+	url = https://github.com/NeoZ666/script.git
