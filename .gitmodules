@@ -4,3 +4,6 @@
 [submodule "Week 2/UTXOs/script"]
 	path = Week 2/UTXOs/script
 	url = https://github.com/NeoZ666/script.git
+[submodule "Week 3/Eth-JSON-rpc"]
+	path = Week 3/Eth-JSON-rpc
+	url = https://github.com/NeoZ666/Eth-JSON-rpc.git
