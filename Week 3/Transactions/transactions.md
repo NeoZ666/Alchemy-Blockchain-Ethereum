@@ -43,3 +43,25 @@ Let's define all of the transaction fields present above:
   chainId: 4, // this is AU, we deal only in test networks! (Göerli)    
 }
 ```
+
+## How To Manually Construct Calldata
+
+Once we send a transaction that points to a smart contract, how does the contract know what specific function you intend to call? Well, all those specifics end up going in the data field of each transaction.
+
+Here is the algorithm to manually construct calldata:
+
+1.  Say Alice wants to call the withdrawEther() function of a faucet smart contract...
+
+2.  Alice must take the keccak256 hash of that function signature:
+
+![Alt text](Screen_Shot_2022-12-07_at_3.46.13_PM.png)
+The resulting output is: `7362377b8e2cc272f16ab5d5441f976bd53fd78ccd01e3c67a1f6b2efdae09e0`
+
+3. Take the first 4 bytes (8 characters) of the hash output, which is just: 7362377b
+
+4. This function takes no arguments, so no need to append any parameter data
+    If the function took arguments, you would need to hash the entire function signature with that parameter type, for example: helloWorld(uint256)
+
+5. Final calldata construction, padded out to 32 bytes: `0x7362377b0000000000000000000000000000000000000000000000000000000000000000`
+
+
