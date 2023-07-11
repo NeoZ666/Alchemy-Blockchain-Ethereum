@@ -14,7 +14,7 @@ Let's define all of the transaction fields present above:
 
 ## Transaction Object Example
 
-    Alice sends Bob 1 ETH
+Alice sends Bob 1 ETH
 ```
 {
   to: "0x2c8645BFE28BEEb6E19843eE9573b7539DD5B530", // Bob
@@ -29,7 +29,7 @@ Let's define all of the transaction fields present above:
 }
 ```
 
-    Alice calls a function on a smart contract
+Alice calls a function on a smart contract
 ```
 {
   to: "0xEA674fdDe714fd979de3EdF0F56AA9716B898ec8", // smart contract address
