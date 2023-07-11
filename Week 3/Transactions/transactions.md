@@ -59,8 +59,8 @@ The resulting output is: `7362377b8e2cc272f16ab5d5441f976bd53fd78ccd01e3c67a1f6b
 
 3. Take the first 4 bytes (8 characters) of the hash output, which is just: 7362377b
 
-4. This function takes no arguments, so no need to append any parameter data
-    If the function took arguments, you would need to hash the entire function signature with that parameter type, for example: helloWorld(uint256)
+4. This function takes no arguments, so no need to append any parameter data.
+> If the function took arguments, you would need to hash the entire function signature with that parameter type, for example: helloWorld(uint256)
 
 5. Final calldata construction, padded out to 32 bytes: `0x7362377b0000000000000000000000000000000000000000000000000000000000000000`
 
